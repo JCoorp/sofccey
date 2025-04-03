@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Cómo funciona? - SOFCEY</title>
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Iconos de Font Awesome -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- Barra de navegación superior -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="como-funciona.html" style="color: yellow;">¿Cómo funciona?</a></li>
+      <li><a href="diccionario.html">Diccionario</a></li>
+      <li><a href="descargar.html">Descargar App</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenedor que agrupa el menú lateral fijo y el contenido -->
+  <div class="container">
+
+    <!-- Menú lateral (sidebar) Fijo -->
+    <aside class="sidebar">
+      <h2>SOFCEY Docs</h2>
+      <ul>
+        <!-- Enlaces con anclas a las secciones de la derecha -->
+        <li><a href="#captura" class="menu-item"><i class="fa fa-hand-paper"></i> Captura de Movimientos</a></li>
+        <li><a href="#procesamiento" class="menu-item"><i class="fa fa-cogs"></i> Procesamiento de Señales</a></li>
+        <li><a href="#traduccion" class="menu-item"><i class="fa fa-text-height"></i> Traducción a Texto</a></li>
+        <li><a href="#visualizacion" class="menu-item"><i class="fa fa-mobile"></i> Visualización y Comunicación</a></li>
+        <li><a href="#alimentacion" class="menu-item"><i class="fa fa-battery-full"></i> Alimentación Eléctrica</a></li>
+        <li><a href="#diseno" class="menu-item"><i class="fa fa-briefcase"></i> Diseño Físico</a></li>
+        <li><a href="#hardware" class="menu-item"><i class="fa fa-microchip"></i> Componentes de Hardware</a></li>
+        <li><a href="#software" class="menu-item"><i class="fa fa-laptop-code"></i> Software y Tecnologías</a></li>
+        <li><a href="#traduccion-ls" class="menu-item"><i class="fa fa-brain"></i> ¿Cómo se traduce?</a></li>
+        <li><a href="#prototipo" class="menu-item"><i class="fa fa-camera"></i> Prototipo</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal (todas las secciones en una sola página) -->
+    <main class="content">
+      <!-- Encabezado general -->
+      <header>
+        <h1>¿Cómo funciona SOFCEY?</h1>
+      </header>
+
+      <!-- Sección: Captura de Movimientos -->
+      <section id="captura">
+        <h2>✋captura de Movimientos</h2>
+        <p>
+          El guante tiene sensores que capturan los movimientos de los dedos y las manos 
+          para detectar gestos. Estos sensores son lo que permiten interpretar las señales 
+          del lenguaje de señas.
+        </p>
+      </section>
+
+      <!-- Sección: Procesamiento de Señales -->
+      <section id="procesamiento">
+        <h2>⚙️ Procesamiento de Señales</h2>
+        <p>
+          Los movimientos capturados son procesados por el microcontrolador, que identifica 
+          los gestos realizados por el usuario, utilizando un sistema de comparación con 
+          una base de datos de gestos predefinidos.
+        </p>
+      </section>
+
+      <!-- Sección: Traducción a Texto -->
+      <section id="traduccion">
+        <h2>🔤 Traducción a Texto</h2>
+        <p>
+          El sistema traduce la seña identificada a texto, que luego se muestra en una pantalla 
+          o dispositivo móvil, permitiendo que otros usuarios puedan leer lo que se ha señalado.
+        </p>
+      </section>
+
+      <!-- Sección: Visualización y Comunicación -->
+      <section id="visualizacion">
+        <h2>📲 Visualización y Comunicación</h2>
+        <p>
+          En versiones más avanzadas, los datos procesados se pueden enviar mediante comunicación 
+          serial, WiFi o Bluetooth hacia una aplicación móvil desarrollada con Flutter o hacia 
+          una plataforma web (Node.js, JavaScript) para análisis remoto.
+        </p>
+      </section>
+
+      <!-- Sección: Alimentación Eléctrica -->
+      <section id="alimentacion">
+        <h2>🔋 Alimentación Eléctrica</h2>
+        <p>
+          Para mantener el dispositivo totalmente portátil, SOFCEY funciona con una batería 
+          recargable de litio (modelo 18650) junto con un módulo de carga TP4056, lo que 
+          permite que el guante se use sin estar conectado a una fuente de alimentación externa 
+          todo el tiempo.
+        </p>
+      </section>
+
+      <!-- Sección: Diseño Físico -->
+      <section id="diseno">
+        <h2>📐 Diseño Físico</h2>
+        <p>
+          El guante ha sido diseñado utilizando SOLIDWORKS y manufacturado mediante impresión 3D 
+          con filamento PLA. El diseño modular permite que los sensores se integren cómodamente, 
+          sin afectar la movilidad ni causar molestias al usuario.
+        </p>
+      </section>
+
+      <!-- Sección: Componentes de Hardware -->
+      <section id="hardware">
+        <h2>🧩 Componentes de Hardware</h2>
+        <ul>
+          <li><strong>Resistencias flexibles:</strong> Detectan la curvatura de cada dedo al realizar una seña.</li>
+          <li><strong>Acelerómetro / Giroscopio:</strong> Mide la orientación y movimiento de la mano completa.</li>
+          <li><strong>Sensores de presión:</strong> Permiten interpretar gestos donde se requiere contacto.</li>
+          <li><strong>Arduino Nano:</strong> Microcontrolador que recibe los datos de los sensores y los procesa.</li>
+          <li><strong>Pantalla LCD (opcional):</strong> Muestra la traducción textual directamente en el dispositivo.</li>
+          <li><strong>Batería recargable:</strong> Proporciona energía al guante, haciéndolo portátil.</li>
+        </ul>
+      </section>
+
+      <!-- Sección: Software y tecnologías utilizadas -->
+      <section id="software">
+        <h2>💻 Software y tecnologías utilizadas</h2>
+        <ul>
+          <li><strong>Python:</strong> Para interpretar señales del guante conectadas a la Raspberry Pi.</li>
+          <li><strong>Dart + Flutter:</strong> Para el desarrollo de una aplicación móvil multiplataforma.</li>
+          <li><strong>JavaScript + Node.js:</strong> Backend de soporte para análisis y visualización de datos.</li>
+          <li><strong>Raspbian:</strong> Sistema operativo que corre en la Raspberry Pi 4B.</li>
+          <li><strong>Notion:</strong> Organización de tareas bajo metodología Scrum.</li>
+        </ul>
+      </section>
+
+      <!-- Sección: ¿Cómo se traduce el lenguaje de señas? -->
+      <section id="traduccion-ls">
+        <h2>🧠 ¿Cómo se traduce el lenguaje de señas?</h2>
+        <p>
+          Cada movimiento o gesto con los dedos produce una variación de resistencia eléctrica 
+          en los sensores flexibles. El Arduino mide estos cambios y, con la ayuda del código, 
+          los convierte en letras o palabras del alfabeto. Además, el acelerómetro y los sensores 
+          de presión permiten interpretar el contexto y la intención del gesto.
+        </p>
+        <p>
+          El sistema puede enviar estos datos a una pantalla o incluso convertirlos a voz 
+          utilizando librerías de síntesis de texto (TTS). En futuras versiones se busca usar 
+          aprendizaje automático para mejorar la precisión de la interpretación.
+        </p>
+      </section>
+
+      <!-- Sección: Imagen del prototipo -->
+      <section id="prototipo">
+        <h2>📸 Imagen del prototipo en funcionamiento</h2>
+        <img
+          src="images/prototipo.jpg"
+          alt="Prototipo del guante SOFCEY"
+          class="product-image"
+        />
+        <p style="text-align:center;">
+          Ilustración 4: Prototipo del equipo con sensores, Arduino y pantalla LCD
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Pie de página (al final) -->
+  <footer>
+    <p>&copy; 2025 SOFCEY | Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
