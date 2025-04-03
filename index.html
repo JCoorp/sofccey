@@ -19,8 +19,12 @@
     </ul>
   </nav>
 
-  <!-- Encabezado principal con hero -->
+  <!-- Encabezado principal con video de fondo -->
   <header class="hero">
+    <video autoplay loop muted playsinline class="hero-video">
+      <source src="images/v1.mp4" type="video/mp4" />
+      Tu navegador no soporta la etiqueta de video HTML5.
+    </video>
     <div class="hero-content">
       <h1>SOFCEY</h1>
       <p>Traduce lenguaje de señas mexicano (LSM) a texto y voz en tiempo real</p>
@@ -132,38 +136,38 @@
     });
   </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("contactForm");
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault(); // Evita que se recargue la página
+  <!-- Script para enviar correos -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contactForm");
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // Evita que se recargue la página
 
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
 
-      try {
-        const response = await fetch("/send-email", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        });
+        try {
+          const response = await fetch("/send-email", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
 
-        if (response.ok) {
-          alert("✅ Mensaje enviado correctamente.");
-          form.reset();
-        } else {
-          alert("❌ Error al enviar el mensaje. Intenta de nuevo.");
+          if (response.ok) {
+            alert("✅ Mensaje enviado correctamente.");
+            form.reset();
+          } else {
+            alert("❌ Error al enviar el mensaje. Intenta de nuevo.");
+          }
+        } catch (err) {
+          console.error("Error al enviar:", err);
+          alert("❌ Error de conexión.");
         }
-      } catch (err) {
-        console.error("Error al enviar:", err);
-        alert("❌ Error de conexión.");
-      }
+      });
     });
-  });
-</script>
-
+  </script>
 
 </body>
 </html>
